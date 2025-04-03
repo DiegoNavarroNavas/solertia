@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detached Deck - ModularWood</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="header"></div> <!-- Placeholder for header -->
+
+    <!-- Hero Section -->
+    <section class="deck-hero">
+        <div class="container">
+            <div class="deck-hero-content">
+                <h1>Detached Deck</h1>
+                <p>Stand-alone structures that create a perfect relaxation area in your yard, designed to be a destination within your outdoor space.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Section -->
+    <section class="deck-content-section">
+        <div class="container">
+            <div class="deck-main-image">
+                <img src="[IMAGE: Detached-deck-feature]" alt="Featured Detached Deck">
+            </div>
+            
+            <div class="deck-details">
+                <div class="deck-details-card">
+                    <h2>Design Features</h2>
+                    <p>Our detached decks are specially designed as freestanding structures that can be placed anywhere in your yard or garden. These versatile platforms create dedicated spaces for relaxation, entertainment, or outdoor dining without being attached to your home.</p>
+                    <div class="detail-image">
+                        <img src="[IMAGE: Detached-deck-design]" alt="Detached Deck Design">
+                    </div>
+                    <p>Each detached deck is crafted from premium hardwood with meticulous attention to detail. The modular design allows for custom shapes and sizes to fit your specific space and usage needs, from intimate garden retreats to spacious entertainment platforms.</p>
+                </div>
+                
+                <div class="deck-details-card">
+                    <h2>Installation & Benefits</h2>
+                    <p>Detached decks offer unparalleled flexibility in placement and design. They can be installed on various surfaces, including grass, gravel, or concrete, and can be positioned to capture the best views, sunlight, or shade in your outdoor space.</p>
+                    <div class="detail-image">
+                        <img src="[IMAGE: Detached-deck-installation]" alt="Detached Deck Installation">
+                    </div>
+                    <p>The elevated design provides better drainage and air circulation beneath the deck, extending its lifespan while creating a distinct visual element in your landscape. The premium hardwood construction ensures durability against weather and daily use.</p>
+                </div>
+                
+                <div class="deck-details-card">
+                    <h2>Innovative Design Approach</h2>
+                    <ul class="benefits-list">
+                        <li><i class="fas fa-check"></i> Create a destination within your landscape</li>
+                        <li><i class="fas fa-check"></i> Position anywhere in your yard to maximize views or create privacy</li>
+                        <li><i class="fas fa-check"></i> Can include built-in features like benches, planters, or pergolas</li>
+                        <li><i class="fas fa-check"></i> Perfect for creating garden retreats or meditation spaces</li>
+                        <li><i class="fas fa-check"></i> Minimal ground preparation required compared to attached decks</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="deck-gallery">
+                <h2>Gallery</h2>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="[IMAGE: Detached-deck-gallery-1]" alt="Detached Deck Example 1">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="[IMAGE: Detached-deck-gallery-2]" alt="Detached Deck Example 2">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="[IMAGE: Detached-deck-gallery-3]" alt="Detached Deck Example 3">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="[IMAGE: Detached-deck-gallery-4]" alt="Detached Deck Example 4">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="deck-cta-section">
+        <div class="container">
+            <div class="deck-cta">
+                <h2>Create Your Perfect Outdoor Retreat</h2>
+                <p>Contact our design team to discuss your detached deck project or request a personalized quote.</p>
+                <div class="cta-buttons">
+                    <a href="index.html#contact" class="btn btn-primary">Contact Us</a>
+                    <a href="index.html#design" class="btn btn-outline">Design Your Deck</a>
+                </div>
+            </div>
+            <div class="other-decks">
+                <h3>Explore Other Deck Types</h3>
+                <div class="other-deck-links">
+                    <a href="ground-decks.html" class="deck-link">
+                        <div class="deck-link-image">
+                            <img src="[IMAGE: Ground-Deck-Small]" alt="Ground Deck">
+                        </div>
+                        <span>Ground Decks</span>
+                    </a>
+                    <a href="elevated-deck.html" class="deck-link">
+                        <div class="deck-link-image">
+                            <img src="[IMAGE: Elevated-Deck-Small]" alt="Elevated Deck">
+                        </div>
+                        <span>Elevated Deck</span>
+                    </a>
+                    <a href="rooftop-deck.html" class="deck-link">
+                        <div class="deck-link-image">
+                            <img src="[IMAGE: Rooftop-Deck-Small]" alt="Rooftop Deck">
+                        </div>
+                        <span>Rooftop & Balcony Deck</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer"></div> <!-- Placeholder for footer -->
+
+    <script>
+        // Function to load external HTML into a specific element
+        function includeHTML(id, url) {
+            fetch(url)
+                .then(response => response.text())
+                .then(data => document.getElementById(id).innerHTML = data);
+        }
+
+        // Inject header and footer
+        includeHTML('header', 'header.html');
+        includeHTML('footer', 'footer.html');
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>

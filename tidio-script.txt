@@ -1,0 +1,2 @@
+<!-- Tidio Chat Plugin -->
+<script src="//code.tidio.co/juqngvnvhh06ab25xeussmxiimsn6lyg.js" async></script>

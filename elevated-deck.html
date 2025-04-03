@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elevated Deck - ModularWood</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="header"></div> <!-- Placeholder for header -->
+
+    <!-- Hero Section -->
+    <section class="deck-hero">
+        <div class="container">
+            <div class="deck-hero-content">
+                <h1>Elevated Deck</h1>
+                <p>Raised structures perfect for sloped terrains or multi-level properties, creating stunning outdoor spaces with enhanced views.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Section -->
+    <section class="deck-content-section">
+        <div class="container">
+            <div class="deck-main-image">
+                <img src="[IMAGE: Elevated-deck-feature]" alt="Featured Elevated Deck">
+            </div>
+            
+            <div class="deck-details">
+                <div class="deck-details-card">
+                    <h2>Structural & Design Advantages</h2>
+                    <p>Our elevated decks are engineered for properties with varying elevations, creating usable outdoor space where traditional patios aren't feasible. These premium structures are built with robust framing systems that ensure stability and longevity.</p>
+                    <div class="detail-image">
+                        <img src="[IMAGE: Elevated-deck-structure]" alt="Elevated Deck Structure">
+                    </div>
+                    <p>Each elevated deck features our signature hardwood construction with precision manufacturing and hidden fastening systems. The raised design creates visual interest in your landscape while maximizing views and creating additional usable space beneath the deck.</p>
+                </div>
+                
+                <div class="deck-details-card">
+                    <h2>Installation & Aesthetic Value</h2>
+                    <p>Elevated decks require professional installation with proper footings, posts, and structural components to ensure safety and stability. Our experienced team handles the entire process, from design to permitting to final construction.</p>
+                    <div class="detail-image">
+                        <img src="[IMAGE: Elevated-deck-installation]" alt="Elevated Deck Installation">
+                    </div>
+                    <p>These decks are ideal for sloped yards, walkout basements, or second-story access points. They can include integrated features such as stairs, railings, pergolas, or built-in seating to enhance their functionality and aesthetic appeal.</p>
+                </div>
+                
+                <div class="deck-details-card">
+                    <h2>Key Benefits</h2>
+                    <ul class="benefits-list">
+                        <li><i class="fas fa-check"></i> Creates usable outdoor space on difficult or sloped terrain</li>
+                        <li><i class="fas fa-check"></i> Provides enhanced views of your property and surroundings</li>
+                        <li><i class="fas fa-check"></i> Creates additional usable space underneath the deck</li>
+                        <li><i class="fas fa-check"></i> Seamless connection between multi-level homes and outdoor areas</li>
+                        <li><i class="fas fa-check"></i> Custom designs available for unique property challenges</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="deck-gallery">
+                <h2>Gallery</h2>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="[IMAGE: Elevated-deck-gallery-1]" alt="Elevated Deck Example 1">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="[IMAGE: Elevated-deck-gallery-2]" alt="Elevated Deck Example 2">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="[IMAGE: Elevated-deck-gallery-3]" alt="Elevated Deck Example 3">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="[IMAGE: Elevated-deck-gallery-4]" alt="Elevated Deck Example 4">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="deck-cta-section">
+        <div class="container">
+            <div class="deck-cta">
+                <h2>Elevate Your Outdoor Living</h2>
+                <p>Contact our experts to discuss your elevated deck project or request a personalized quote.</p>
+                <div class="cta-buttons">
+                    <a href="index.html#contact" class="btn btn-primary">Contact Us</a>
+                    <a href="index.html#design" class="btn btn-outline">Design Your Deck</a>
+                </div>
+            </div>
+            <div class="other-decks">
+                <h3>Explore Other Deck Types</h3>
+                <div class="other-deck-links">
+                    <a href="ground-decks.html" class="deck-link">
+                        <div class="deck-link-image">
+                            <img src="[IMAGE: Ground-Deck-Small]" alt="Ground Deck">
+                        </div>
+                        <span>Ground Decks</span>
+                    </a>
+                    <a href="detached-deck.html" class="deck-link">
+                        <div class="deck-link-image">
+                            <img src="[IMAGE: Detached-Deck-Small]" alt="Detached Deck">
+                        </div>
+                        <span>Detached Deck</span>
+                    </a>
+                    <a href="rooftop-deck.html" class="deck-link">
+                        <div class="deck-link-image">
+                            <img src="[IMAGE: Rooftop-Deck-Small]" alt="Rooftop Deck">
+                        </div>
+                        <span>Rooftop & Balcony Deck</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer"></div> <!-- Placeholder for footer -->
+
+    <script>
+        // Function to load external HTML into a specific element
+        function includeHTML(id, url) {
+            fetch(url)
+                .then(response => response.text())
+                .then(data => document.getElementById(id).innerHTML = data);
+        }
+
+        // Inject header and footer
+        includeHTML('header', 'header.html');
+        includeHTML('footer', 'footer.html');
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>

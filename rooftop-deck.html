@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rooftop & Balcony Deck - ModularWood</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="header"></div> <!-- Placeholder for header -->
+
+    <!-- Hero Section -->
+    <section class="deck-hero">
+        <div class="container">
+            <div class="deck-hero-content">
+                <h1>Rooftop & Balcony Decks</h1>
+                <p>Transform your rooftop or balcony into a beautiful outdoor living space with our premium modular decking solutions.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Section -->
+    <section class="deck-content-section">
+        <div class="container">
+            <div class="deck-main-image">
+                <img src="[IMAGE: Rooftop-deck-feature]" alt="Featured Rooftop Deck">
+            </div>
+            
+            <div class="deck-details">
+                <div class="deck-details-card">
+                    <h2>Design & Material</h2>
+                    <p>Our rooftop and balcony decks are specially engineered for elevated urban spaces, transforming unused areas into stunning outdoor retreats. We use lightweight yet durable materials that won't overburden the structure beneath.</p>
+                    <div class="detail-image">
+                        <img src="[IMAGE: Rooftop-deck-material]" alt="Rooftop Deck Material">
+                    </div>
+                    <p>Each deck features our signature precision manufacturing with modular components that can be easily transported to upper levels and assembled on-site. The premium hardwood construction provides a luxurious feel while withstanding harsh rooftop conditions including sun exposure, wind, and temperature fluctuations.</p>
+                </div>
+                
+                <div class="deck-details-card">
+                    <h2>Installation & Usage</h2>
+                    <p>Rooftop and balcony installations require specialized knowledge of load requirements, drainage considerations, and appropriate fastening systems. Our expert team conducts thorough structural assessments and works with building management when necessary to ensure safe, code-compliant installations.</p>
+                    <div class="detail-image">
+                        <img src="[IMAGE: Rooftop-deck-installation]" alt="Rooftop Deck Installation">
+                    </div>
+                    <p>Our innovative pedestal system creates a level surface over uneven roofing or balcony floors while providing proper drainage underneath. This system also allows for easy access to the waterproofing membrane for maintenance or repairs without dismantling the entire deck.</p>
+                </div>
+                
+                <div class="deck-details-card">
+                    <h2>Unique Benefits</h2>
+                    <ul class="benefits-list">
+                        <li><i class="fas fa-check"></i> Transforms unused urban space into valuable outdoor living areas</li>
+                        <li><i class="fas fa-check"></i> Engineered to meet weight restrictions of rooftop and balcony applications</li>
+                        <li><i class="fas fa-check"></i> Modular design allows for custom configurations in challenging spaces</li>
+                        <li><i class="fas fa-check"></i> Provides enhanced comfort compared to concrete or tile surfaces</li>
+                        <li><i class="fas fa-check"></i> Weather-resistant materials suitable for exposed conditions</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="deck-gallery">
+                <h2>Gallery</h2>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="[IMAGE: Rooftop-deck-gallery-1]" alt="Rooftop Deck Example 1">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="[IMAGE: Rooftop-deck-gallery-2]" alt="Rooftop Deck Example 2">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="[IMAGE: Balcony-deck-gallery-1]" alt="Balcony Deck Example 1">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="[IMAGE: Balcony-deck-gallery-2]" alt="Balcony Deck Example 2">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="deck-cta-section">
+        <div class="container">
+            <div class="deck-cta">
+                <h2>Elevate Your Urban Living</h2>
+                <p>Contact our specialists to discuss your rooftop or balcony deck project and request a personalized quote.</p>
+                <div class="cta-buttons">
+                    <a href="index.html#contact" class="btn btn-primary">Contact Us</a>
+                    <a href="index.html#design" class="btn btn-outline">Design Your Deck</a>
+                </div>
+            </div>
+            <div class="other-decks">
+                <h3>Explore Other Deck Types</h3>
+                <div class="other-deck-links">
+                    <a href="ground-decks.html" class="deck-link">
+                        <div class="deck-link-image">
+                            <img src="[IMAGE: Ground-Deck-Small]" alt="Ground Deck">
+                        </div>
+                        <span>Ground Decks</span>
+                    </a>
+                    <a href="detached-deck.html" class="deck-link">
+                        <div class="deck-link-image">
+                            <img src="[IMAGE: Detached-Deck-Small]" alt="Detached Deck">
+                        </div>
+                        <span>Detached Deck</span>
+                    </a>
+                    <a href="elevated-deck.html" class="deck-link">
+                        <div class="deck-link-image">
+                            <img src="[IMAGE: Elevated-Deck-Small]" alt="Elevated Deck">
+                        </div>
+                        <span>Elevated Deck</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer"></div> <!-- Placeholder for footer -->
+
+    <script>
+        // Function to load external HTML into a specific element
+        function includeHTML(id, url) {
+            fetch(url)
+                .then(response => response.text())
+                .then(data => document.getElementById(id).innerHTML = data);
+        }
+
+        // Inject header and footer
+        includeHTML('header', 'header.html');
+        includeHTML('footer', 'footer.html');
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>

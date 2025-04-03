@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solertia | Premium Decking Woodcraft</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="header"></div>
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+            });
+    </script>
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Premium Decking Woodcraft</h1>
+                <p>We are vertically integrated in sourcing, transformation, design, manufacturing, and distribution of wood products for residential and commercial real estate.</p>
+                <a href="#types" class="btn btn-primary">Explore Our Decks</a>
+            </div>
+        </div>
+    </section>
+    <section id="types" class="types-section">
+        <div class="container">
+            <h2 class="section-title">Types of Decks</h2>
+            <div class="deck-types">
+                <div class="deck-card">
+                    <div class="deck-image">
+                        <img src="[IMAGE: Ground-Deck]" alt="Ground Deck">
+                    </div>
+                    <h3>Ground</h3>
+                    <p>Perfect solution for flat areas and gardens with minimal elevation.</p>
+                    <a href="ground-decks.html" class="btn btn-secondary">View Details</a>
+                </div>
+                <div class="deck-card">
+                    <div class="deck-image">
+                        <img src="[IMAGE: Detached-Deck]" alt="Detached Deck">
+                    </div>
+                    <h3>Detached</h3>
+                    <p>Stand-alone structures that create a perfect relaxation area in your yard.</p>
+                    <a href="detached-deck.html" class="btn btn-secondary">View Details</a>
+                </div>
+                <div class="deck-card">
+                    <div class="deck-image">
+                        <img src="[IMAGE: Elevated-Deck]" alt="Elevated Deck">
+                    </div>
+                    <h3>Elevated</h3>
+                    <p>Raised structures perfect for sloped terrains or multi-level properties.</p>
+                    <a href="elevated-deck.html" class="btn btn-secondary">View Details</a>
+                </div>
+                <div class="deck-card">
+                    <div class="deck-image">
+                        <img src="[IMAGE: Rooftop-Deck]" alt="Rooftop & Balcony Deck">
+                    </div>
+                    <h3>Rooftop & Balcony</h3>
+                    <p>Transform your rooftop or balcony into a beautiful outdoor living space.</p>
+                    <a href="rooftop-deck.html" class="btn btn-secondary">View Details</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="features-section">
+        <div class="container">
+            <div class="features">
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>High Durability – Hardwood</h3>
+                    <p>Our premium hardwood decks are built to last and withstand harsh weather conditions.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-ruler-combined"></i>
+                    </div>
+                    <h3>Precisely Manufactured</h3>
+                    <p>Every piece is crafted with precision to ensure perfect fit and finish.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Professional Installation</h3>
+                    <p>Our expert team ensures flawless installation for long-lasting results.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-cards">
+                <div class="cta-card" id="system">
+                    <div class="cta-icon">
+                        <i class="fas fa-layer-group"></i>
+                    </div>
+                    <h3>Our Decking System</h3>
+                    <p>Get an overview of our system and products.</p>
+                    <a href="#" class="btn btn-outline">Learn More</a>
+                </div>
+                <div class="cta-card" id="design">
+                    <div class="cta-icon">
+                        <i class="fas fa-pencil-ruler"></i>
+                    </div>
+                    <h3>Design and Get a Quote</h3>
+                    <p>Pre-Design the deck for your site and get a cost estimate for your project.</p>
+                    <a href="#" class="btn btn-outline">Start Design</a>
+                </div>
+            </div>
+            <div class="follow-support">
+                <p>Reach our team for support and questions about your project.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="testimonials-section">
+        <div class="container">
+            <h2 class="section-title">What Our Customers Say</h2>
+            <div class="testimonials">
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"Sed a purus sed nunc sagittis posuere. Etiam imperdiet nibh ut ex ullamcorper molestie. Mauris pellentesque augue turpis sed porttitor."</p>
+                        <h4>-Melissa Tran</h4>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"Sed a purus sed nunc sagittis posuere. Etiam imperdiet nibh ut ex ullamcorper molestie. Mauris pellentesque augue turpis sed porttitor."</p>
+                        <h4>-Rakib Hosan</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-container">
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">SEND</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <div class="email-info">
+                        <h3>Email Us</h3>
+                        <p><a href="mailto:contact@solertia.co">contact@solertia.co</a></p>
+                    </div>
+                    <div class="follow">
+                        <h3>Follow Us</h3>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div id="footer-content"></div>
+        </div>
+        <!-- Tidio Chat Plugin -->
+        <script src="//code.tidio.co/juqngvnvhh06ab25xeussmxiimsn6lyg.js" async></script>
+    </footer>
+
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-content').innerHTML = data;
+            });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
