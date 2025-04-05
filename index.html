@@ -10,13 +10,7 @@
 </head>
 <body>
     <div id="header"></div>
-    <script>
-        fetch('header.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('header').innerHTML = data;
-            });
-    </script>
+
     <section class="hero">
         <div class="container">
             <div class="hero-content">
@@ -179,27 +173,8 @@
             </div>
         </div>
     </section>
-    <footer class="footer">
-        <div class="container">
-            <div id="footer-content"></div>
-        </div>
-        <!-- Tidio Chat Plugin -->
-        <script src="//code.tidio.co/juqngvnvhh06ab25xeussmxiimsn6lyg.js" async></script>
-    </footer>
 
-    <script>
-        fetch('footer.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('footer-content').innerHTML = data;
-            });
-    </script>
-    <script src="script.js"></script>
-</body>
-</html>
-            </div>
-        </div>
-    </footer>
+    <div id="footer"></div>
 
     <script src="script.js"></script>
 </body>

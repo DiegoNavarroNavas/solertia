@@ -1,40 +1,101 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Toggle Mobile Menu
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navMenu = document.querySelector('.nav-menu');
-    
-    if (menuToggle) {
-        menuToggle.addEventListener('click', function() {
-            navMenu.classList.toggle('active');
-            this.classList.toggle('active');
-        });
+    // Function to load external HTML into a specific element
+    function includeHTML(id, url, callback) {
+        fetch(url)
+            .then(response => response.text())
+            .then(data => {
+                const element = document.getElementById(id);
+                if (element) {
+                    element.innerHTML = data;
+                    if (callback) callback(); // Execute callback function after content is loaded
+                } else {
+                    console.error(`Element with ID "${id}" not found.`);
+                }
+            })
+            .catch(error => console.error('Error fetching HTML:', error));
     }
-    
-    // Mobile Dropdown Menus
-    const dropdowns = document.querySelectorAll('.dropdown');
-    
-    dropdowns.forEach(dropdown => {
-        const link = dropdown.querySelector('a');
+
+    // Inject header and footer and set up mobile menu after header loads
+    includeHTML('header', 'header.html', setupMobileMenu);
+    includeHTML('footer', 'footer.html');
+
+    // Function to set up mobile menu functionality
+    function setupMobileMenu() {
+        // Toggle Mobile Menu
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
         
-        link.addEventListener('click', function(e) {
-            if (window.innerWidth <= 992) {
-                e.preventDefault();
-                dropdown.classList.toggle('active');
-            }
-        });
-    });
-    
-    // Close mobile menu when clicking outside
-    document.addEventListener('click', function(e) {
-        if (!navMenu.contains(e.target) && !menuToggle.contains(e.target)) {
-            navMenu.classList.remove('active');
-            menuToggle.classList.remove('active');
-            
-            dropdowns.forEach(dropdown => {
-                dropdown.classList.remove('active');
+        if (menuToggle && navMenu) {
+            menuToggle.addEventListener('click', function() {
+                navMenu.classList.toggle('active');
+                this.classList.toggle('active');
             });
         }
-    });
+        
+        // Mobile Dropdown Menus
+        const dropdowns = document.querySelectorAll('.dropdown');
+        
+        dropdowns.forEach(dropdown => {
+            const link = dropdown.querySelector('a');
+            
+            link.addEventListener('click', function(e) {
+                if (window.innerWidth <= 992) {
+                    e.preventDefault();
+                    dropdown.classList.toggle('active');
+                }
+            });
+        });
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (navMenu && menuToggle && !navMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+                navMenu.classList.remove('active');
+                menuToggle.classList.remove('active');
+                
+                dropdowns.forEach(dropdown => {
+                    dropdown.classList.remove('active');
+                });
+            }
+        });
+        
+        // Smooth Scrolling for Internal Links
+        const internalLinks = document.querySelectorAll('a[href^="#"]');
+        
+        internalLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                // Skip for dropdown toggles on mobile
+                if (this.parentElement.classList.contains('dropdown') && window.innerWidth <= 992) {
+                    return;
+                }
+                
+                const targetId = this.getAttribute('href');
+                
+                // Skip for links that don't point to an element
+                if (targetId === '#') {
+                    e.preventDefault();
+                    return;
+                }
+                
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    e.preventDefault();
+                    
+                    const navbarHeight = document.querySelector('.navbar').offsetHeight;
+                    const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu after clicking a link
+                    navMenu.classList.remove('active');
+                    menuToggle.classList.remove('active');
+                }
+            });
+        });
+    }
     
     // Form Validation
     const contactForm = document.getElementById('contactForm');
@@ -115,42 +176,10 @@ document.addEventListener('DOMContentLoaded', function() {
         const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return regex.test(email);
     }
-    
-    // Smooth Scrolling for Internal Links
-    const internalLinks = document.querySelectorAll('a[href^="#"]');
-    
-    internalLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            // Skip for dropdown toggles on mobile
-            if (this.parentElement.classList.contains('dropdown') && window.innerWidth <= 992) {
-                return;
-            }
-            
-            const targetId = this.getAttribute('href');
-            
-            // Skip for links that don't point to an element
-            if (targetId === '#') {
-                e.preventDefault();
-                return;
-            }
-            
-            const targetElement = document.querySelector(targetId);
-            
-            if (targetElement) {
-                e.preventDefault();
-                
-                const navbarHeight = document.querySelector('.navbar').offsetHeight;
-                const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
-                
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                });
-                
-                // Close mobile menu after clicking a link
-                navMenu.classList.remove('active');
-                menuToggle.classList.remove('active');
-            }
-        });
-    });
+
+    // Load Tidio Chat Plugin
+    const tidioScript = document.createElement('script');
+    tidioScript.src = "//code.tidio.co/juqngvnvhh06ab25xeussmxiimsn6lyg.js";
+    tidioScript.async = true;
+    document.body.appendChild(tidioScript);
 });

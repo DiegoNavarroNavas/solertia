@@ -598,6 +598,7 @@ img {
 /* Responsive Styles */
 @media screen and (max-width: 992px) {
     .nav-menu {
+        display: none;
         position: fixed;
         top: 70px;
         left: -100%;
@@ -612,6 +613,7 @@ img {
     }
 
     .nav-menu.active {
+        display: flex;
         left: 0;
     }
 
