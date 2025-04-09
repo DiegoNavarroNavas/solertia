@@ -97,6 +97,21 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
+    // Toggle Button Logic for Expandable Content
+    const toggleButtons = document.querySelectorAll(".toggle-btn");
+    toggleButtons.forEach(button => {
+        button.addEventListener("click", function () {
+            const textContent = this.nextElementSibling;
+            if (textContent.style.display === "none" || textContent.style.display === "") {
+                textContent.style.display = "block";
+                this.textContent = "Hide Details";
+            } else {
+                textContent.style.display = "none";
+                this.textContent = "Show Details";
+            }
+        });
+    });
+
     // Form Validation
     const contactForm = document.getElementById('contactForm');
     

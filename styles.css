@@ -558,6 +558,30 @@ img {
     color: var(--white);
 }
 
+/* System Text */
+.text-content {
+    display: none; /* Initially hide the content */
+    transition: max-height 0.3s ease-out;
+    overflow: hidden;
+}
+.expandable.active .text-content {
+    display: block; /* Show content when active */
+}
+.toggle-btn {
+    cursor: pointer;
+    padding: 10px;
+    display: inline-block;
+    margin-bottom: 10px;
+    background-color: var(--dark-color);
+    color: var(--gray);
+    border: 2px solid var(--dark-color);
+}
+
+.toggle-btn:hover {
+    background-color: transparent;
+    color: var(--dark-color);
+}
+
 /* Footer */
 .footer {
     background-color: var(--dark-color);
