@@ -730,6 +730,22 @@ img {
 }
 
 @media screen and (max-width: 768px) {
+    .nav-menu {
+        display: none;
+        position: fixed;
+        top: 70px;
+        left: 0;
+        right: 0;
+        width: 80%;
+        margin: 0 auto;
+        background-color: var(--white);
+        flex-direction: column;
+        padding: 40px 0;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        transition: var(--transition);
+        overflow-y: auto;
+    }
+
     .section-title {
         font-size: 2rem;
         font-family: 'Georgia', 'Times New Roman', serif;
@@ -759,6 +775,22 @@ img {
 }
 
 @media screen and (max-width: 576px) {
+    .nav-menu {
+        display: none;
+        position: fixed;
+        top: 70px;
+        left: 0;
+        right: 0;
+        width: 80%;
+        margin: 0 auto;
+        background-color: var(--white);
+        flex-direction: column;
+        padding: 40px 0;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        transition: var(--transition);
+        overflow-y: auto;
+    }
+    
     .container {
         padding: 0 15px;
     }
