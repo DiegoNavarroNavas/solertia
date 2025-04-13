@@ -39,6 +39,16 @@ ul {
     list-style: none;
 }
 
+ol {
+    list-style-type: decimal; /* Ensure ordered list uses decimal type */
+    padding-left: 20px; /* Add padding for better visibility */
+    margin: 0; /* Remove default margin */
+}
+
+ol li {
+    margin-bottom: 20px; /* Add spacing between list items */
+}
+
 img {
     max-width: 100%;
     height: auto;
@@ -458,7 +468,7 @@ img {
 }
 
 .testimonial-content p::before {
-    content: '\\201C';
+    content: '\201C';
     font-size: 2.5rem;
     position: absolute;
     left: -10px;
@@ -564,7 +574,7 @@ img {
     transition: max-height 0.3s ease-out;
     overflow: hidden;
 }
-.expandable.active .text-content {
+.text-content.active {
     display: block; /* Show content when active */
 }
 .toggle-btn {

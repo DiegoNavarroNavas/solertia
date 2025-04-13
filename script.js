@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Inject header and footer and set up mobile menu after header loads
     includeHTML('header', 'header.html', setupMobileMenu);
-    includeHTML('footer', 'footer.html');
+    includeHTML('footer', 'footer.html', initializeToggleButtons);
 
     // Function to set up mobile menu functionality
     function setupMobileMenu() {
@@ -97,21 +97,34 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Toggle Button Logic for Expandable Content
-    const toggleButtons = document.querySelectorAll(".toggle-btn");
-    toggleButtons.forEach(button => {
-        button.addEventListener("click", function () {
-            const textContent = this.nextElementSibling;
-            if (textContent.style.display === "none" || textContent.style.display === "") {
-                textContent.style.display = "block";
-                this.textContent = "Hide Details";
-            } else {
-                textContent.style.display = "none";
-                this.textContent = "Show Details";
-            }
+    function initializeToggleButtons() {
+        const toggleButtons = document.querySelectorAll(".toggle-btn");
+        toggleButtons.forEach(button => {
+            button.addEventListener("click", function () {
+                const card = button.closest('.deck-details-card');  // Find the closest card
+                const textContent = card.querySelector('.text-content');  // Get the specific card's text content
+                
+                // Get all text contents within the same context of deck-details
+                const allTextContents = document.querySelectorAll('.deck-details-card .text-content');
+    
+                // Collapse all other text contents
+                allTextContents.forEach(content => {
+                    if (content !== textContent) {
+                        content.style.display = 'none'; // Collapse all other contents
+                        content.classList.remove('active'); // Optional: If you manage classes
+                    }
+                });
+    
+                // Toggle the specific card's text content
+                const isActive = textContent.style.display === 'block';
+                textContent.style.display = isActive ? 'none' : 'block'; // Toggle display
+    
+                // Update button text
+                button.textContent = isActive ? 'Show Details' : 'Hide Details';
+            });
         });
-    });
-
+    }
+    
     // Form Validation
     const contactForm = document.getElementById('contactForm');
     
