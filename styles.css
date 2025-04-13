@@ -670,9 +670,10 @@ img {
         display: none;
         position: fixed;
         top: 70px;
-        left: -100%;
+        left: 0;
+        right: 0;
         width: 80%;
-        height: calc(100vh - 70px);
+        margin: 0 auto;
         background-color: var(--white);
         flex-direction: column;
         padding: 40px 0;
