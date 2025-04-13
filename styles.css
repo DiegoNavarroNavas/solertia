@@ -741,6 +741,10 @@ img {
     .footer .social-icons {
         justify-content: center;
     }
+
+    .container {
+        padding: 0 15px;
+    }
 }
 
 @media screen and (max-width: 576px) {
