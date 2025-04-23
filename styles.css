@@ -727,6 +727,16 @@ img {
     .cta-cards {
         grid-template-columns: 1fr;
     }
+
+    .deck-content-section.container {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .flex-row {
+        gap: 16px !important;
+        margin-bottom: 80px !important;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -772,6 +782,16 @@ img {
     .container {
         padding: 0 15px;
     }
+
+    .deck-content-section.container {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .flex-row {
+        gap: 16px !important;
+        margin-bottom: 80px !important;
+    }
 }
 
 @media screen and (max-width: 576px) {
@@ -805,6 +825,16 @@ img {
 
     .contact-form form, .contact-info {
         padding: 25px;
+    }
+
+    .deck-content-section.container {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .flex-row {
+        gap: 16px !important;
+        margin-bottom: 80px !important;
     }
 }/* Additional styles for deck detail pages */
 
